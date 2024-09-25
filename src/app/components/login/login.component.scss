@@ -1,0 +1,104 @@
+body {
+  margin: 0;  // Remove margens padrão
+  height: 100vh;  // Altura da viewport
+  background-image: url('/assets/u3s90o68ob52qmzmyn7lf5ofp9a5x1atmy60.jpg');  // Caminho absoluto
+  background-size: cover;  // Faz a imagem cobrir toda a área
+  background-position: center;  // Centraliza a imagem
+  background-repeat: no-repeat;  // Impede a repetição da imagem
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;  /* Ocupa 90% da altura da viewport */
+  padding: 20px;
+
+  .esqueciSenha {
+    color: #0786fd;
+    position: relative;
+    top: -10px;
+    left: 154px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .text-login {
+    position: relative;
+    font-size: 50px;
+    right: -60px;
+    top: -20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;  /* Organiza os elementos do formulário verticalmente */
+    align-items: flex-start;  /* Alinha os itens do formulário à esquerda */
+    justify-content: center; 
+    background-color: rgb(255, 255, 255,);  /* Fundo do formulário */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);  /* Sombra suave */
+    width: 800px;
+    height: 450px;
+    position: relative;  /* Necessário para o posicionamento absoluto da imagem */
+
+    /* Logo acima do campo de usuário */
+    .imglogo {
+      width: 100px;  /* Define a largura da imagem do logo */
+      margin-bottom: 20px;  /* Espaço entre o logo e o campo de usuário */
+    }
+
+    div {
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin-bottom: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+
+      input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 250px;
+      }
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #00b753;  /* Cor de fundo do botão */
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #00994d;  /* Muda a cor do botão ao passar o mouse */
+      }
+    }
+
+    /* Container para a imagem das crianças à direita dos inputs */
+    .imgcriancas-container {
+      position: absolute;  /* Posiciona a imagem dentro do formulário */
+      right: 20px;  /* Distância da borda direita do formulário */
+      bottom: 20px;  /* Distância do fundo do formulário */
+      
+      .imgcriancas {
+        position: relative;
+        left: 19px;
+        top: 35px;
+        width: 450px;  /* Ajuste a largura da imagem das crianças */
+        height: 490px;  /* Mantém a proporção da imagem */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
