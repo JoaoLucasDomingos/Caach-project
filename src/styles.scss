@@ -1,0 +1,21 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+/* Estilos da barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #c4f1d6 ; /* Cor do fundo da barra de rolagem */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #c4f1d6 ; /* Cor da parte que pode ser arrastada */
+    border-radius: 6px; /* Borda arredondada para o botão de rolagem */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #009740; /* Cor ao passar o mouse sobre a parte que pode ser arrastada */
+  }
+  
