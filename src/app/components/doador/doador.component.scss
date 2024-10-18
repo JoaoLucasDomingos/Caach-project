@@ -66,30 +66,6 @@
     margin: 20px auto;
 }
 
-.img-preview {
-    width: 150px; /* Largura do preview */
-    height: 150px; /* Altura do preview */
-    object-fit: cover; /* Manter proporções da imagem */
-    border-radius: 50%; /* Formato redondo */
-    border: 2px solid #00b753; /* Borda azul */
-    margin-bottom: 10px; /* Espaçamento abaixo da imagem */
-    transition: transform 0.3s; /* Efeito de transição */
-}
-
-/* Efeito ao passar o mouse sobre a imagem */
-.img-preview:hover {
-    transform: scale(1.05); /* Aumentar imagem ao passar o mouse */
-}
-
-.change-photo {
-    display: none; /* Ocultar o botão por padrão */
-    cursor: pointer; /* Mostrar que é clicável */
-}
-
-.img-container:hover .change-photo {
-    display: block; /* Mostrar o botão ao passar o mouse */
-}
-
 .list-button {
     padding: 12px 20px;  // Adiciona padding ao botão
     margin-left: 20px;    // Adiciona margem à esquerda do botão
@@ -101,4 +77,7 @@
     padding-left: 20px;   // Adiciona padding à esquerda da página
     padding-right: 20px;  // Adiciona padding à direita da página
 }
-
+.row{
+    justify-content: center;
+    align-items: center;
+}

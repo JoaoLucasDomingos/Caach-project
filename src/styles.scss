@@ -1,4 +1,4 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 /* Estilos da barra de rolagem */
@@ -18,4 +18,22 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #009740; /* Cor ao passar o mouse sobre a parte que pode ser arrastada */
   }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; // Garante que o body ocupe pelo menos 100% da altura da tela
+}
+
+.container {
+    flex-grow: 1; // Faz com que o container principal cresça e empurre o footer para baixo
+}
+
+footer {
+    background-color: #00b753; // Cor de fundo do footer
+    color: white; // Cor do texto
+    padding: 10px; // Adiciona padding ao footer
+    text-align: center; // Centraliza o texto
+}
+
   
