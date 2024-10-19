@@ -21,7 +21,8 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "types": ["jasmine", "node"]  // Corrigido aqui
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
@@ -31,6 +32,6 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/polyfills.ts"  // Adicione esta linha
+    "src/polyfills.ts"
   ]
 }
