@@ -7,9 +7,9 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { DoadorComponent } from './components/doador/doador.component';
 import { DoadorListComponent } from './components/doador-list/doador-list.component';
-import { DoadorEditComponent } from './components/doador-edit/doador-edit.component'; // standalone
+import { DoadorEditComponent } from './components/doador-edit/doador-edit.component'; 
 import { RouterModule } from '@angular/router';
-
+import { ProdutoComponent } from './components/produto/produto.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +17,13 @@ import { RouterModule } from '@angular/router';
     LoginComponent,
     HomeComponent,
     DoadorComponent,
-    DoadorListComponent,
+    DoadorListComponent
+    
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    DoadorEditComponent, // importar o componente standalone aqui
-    RouterModule.forRoot([]) // Definir as rotas aqui
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,8 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
+import { ModalService } from 'src/app/components/services/modal.service'; // Certifique-se de que o caminho está correto
 
-Chart.register(...registerables); // Registra os componentes necessários do Chart.js
+Chart.register(...registerables);
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,8 @@ Chart.register(...registerables); // Registra os componentes necessários do Cha
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements AfterViewInit {
+
+  constructor(private modalService: ModalService) {}
 
   ngAfterViewInit() {
     this.renderChart();
@@ -18,14 +21,14 @@ export class HomeComponent implements AfterViewInit {
     const ctx = document.getElementById('donationChart') as HTMLCanvasElement;
 
     new Chart(ctx, {
-      type: 'bar', // Tipo de gráfico (barras)
+      type: 'bar',
       data: {
         labels: ['Out', 'Nov', 'Dez', 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set'],
         datasets: [{
           label: 'Doações nos últimos 12 meses',
-          data: [50, 70, 60, 90, 120, 150, 180, 170, 160, 140, 130, 110], // Números genéricos para simulação
-          backgroundColor: '#00b753', // Cor de fundo das barras
-          borderColor: '#00b753', // Cor da borda das barras
+          data: [50, 70, 60, 90, 120, 150, 180, 170, 160, 140, 130, 110],
+          backgroundColor: '#00b753',
+          borderColor: '#00b753',
           borderWidth: 2
         }]
       },
@@ -38,5 +41,9 @@ export class HomeComponent implements AfterViewInit {
         }
       }
     });
+  }
+
+  openProductModal() {
+    this.modalService.open(); // Chama o método para abrir o modal
   }
 }

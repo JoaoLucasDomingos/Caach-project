@@ -5,17 +5,17 @@ import { HomeComponent } from './components/home/home.component';
 import { DoadorComponent } from './components/doador/doador.component';
 import { DoadorListComponent } from './components/doador-list/doador-list.component';
 import { DoadorEditComponent } from './components/doador-edit/doador-edit.component';
+import { ProdutoComponent } from './components/produto/produto.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redireciona de '' para '/login'
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'doador', component: DoadorComponent },
   { path: 'doador-list', component: DoadorListComponent },
-  { path: 'doador/edit/:cpf', component: DoadorEditComponent }, // Rota para edição
-  // Remova a linha duplicada abaixo
-  // { path: 'doador/edit/:cpf', component: DoadorEditComponent }, 
-  { path: '**', redirectTo: '/login' } // Redireciona qualquer rota desconhecida para '/login'
+  { path: 'doador/edit/:cpf', component: DoadorEditComponent },
+  { path: 'produto', component: ProdutoComponent },  // Mova esta linha para cima da rota '**'
+  { path: '**', redirectTo: '/login' }
 ];
 
 @NgModule({
