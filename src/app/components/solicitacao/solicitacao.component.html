@@ -1,0 +1,84 @@
+    <nav class="navbar bg-body-tertiary" id="nav">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" routerLink="/home" id="caacchtitle">
+                <img src="assets/Logo contraste_.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" id="imgnav">
+            </a>
+            <div>
+                <a routerLink="/home" class="caacchtitle">CAACCH</a>
+            </div>
+            <div class="link-container">
+                <a class="text-white" routerLink="/doador">Doador</a>
+                <a class="text-white" routerLink="/produto">Produto</a>
+                <a class="text-white" href="/doacao">Doação</a>
+                <a class="text-white" href="/solicitacao">Solicitação</a>
+                <a class="text-white" href="/auditoria">Auditoria</a>
+                <a class="text-white" href="/estoque">Estoque</a>
+              </div>
+        </div>
+    </nav>
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+        <div class="col-md-8">
+            <h1 class="msg-doador text-center">Solicitação</h1>
+            <hr class="row-title">
+            <form class="solicitacao-form">
+                <!-- Nome -->
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" class="form-control" required>
+                </div>
+    
+                <!-- CPF -->
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" class="form-control" required>
+                </div>
+    
+                <!-- Endereço -->
+                <div class="form-group">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" class="form-control" required>
+                </div>
+    
+                <!-- Bairro -->
+                <div class="form-group">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro" class="form-control" required>
+                </div>
+    
+                <!-- Número -->
+                <div class="form-group">
+                    <label for="numero">Número:</label>
+                    <input type="number" id="numero" name="numero" class="form-control" required>
+                </div>
+    
+                <!-- Telefone -->
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" class="form-control" required>
+                </div>
+    
+                <!-- Pedido (Descrição) -->
+                <div class="form-group">
+                    <label for="pedido">Pedido (Descrição):</label>
+                    <textarea id="pedido" name="pedido" class="form-control" rows="4" required></textarea>
+                </div>
+    
+                <!-- Data Solicitação -->
+                <div class="form-group">
+                    <label for="data-solicitacao">Data Solicitação:</label>
+                    <input type="date" id="data-solicitacao" name="data-solicitacao" class="form-control" required>
+                </div>
+    
+                <!-- Botão de Envio -->
+                <button type="submit" class="btn btn-success">Enviar Solicitação</button>
+            </form>
+        </div>
+    </div>
+    <br><br>
+
+        
+ 
+    <div class="footer text-center text-white p-3">
+        © 2024 Copyright:
+        <a class="text-white" href="/home">CAACCH</a>
+    </div>

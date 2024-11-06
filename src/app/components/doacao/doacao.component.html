@@ -1,0 +1,72 @@
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<nav class="navbar bg-body-tertiary" id="nav">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" routerLink="/home" id="caacchtitle">
+      <img src="assets/Logo contraste_.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" id="imgnav">
+    </a>
+    <div>
+      <a routerLink="/home" class="caacchtitle">CAACCH</a>
+    </div>
+    <div class="link-container">
+      <a class="text-white" routerLink="/doador">Doador</a>
+      <a class="text-white" routerLink="/produto">Produto</a>
+      <a class="text-white" href="/doacao">Doação</a>
+      <a class="text-white" href="/solicitacao">Solicitação</a>
+      <a class="text-white" href="/auditoria">Auditoria</a>
+      <a class="text-white" href="/estoque">Estoque</a>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="col-md-8">
+      <h1 class="msg-doador text-center">Cadastro de Doação</h1>
+      <hr class="row-title">
+  
+      <!-- Formulário de Doação -->
+      <div class="doacao-container">
+        <form (ngSubmit)="onSubmit()" #doacaoForm="ngForm">
+          <!-- Seleção do Doador -->
+          <div class="form-group">
+            <label for="doador">Doador:</label>
+            <select id="doador" name="doador" class="form-control" [(ngModel)]="doacao.doador" required>
+              <option value="" disabled selected>Selecione um doador</option>
+              <option *ngFor="let doador of doadores" [value]="doador">{{ doador }}</option>
+            </select>
+          </div>
+  
+          <!-- Produtos Cadastrados -->
+          <div class="form-group">
+            <label for="produto">Produto:</label>
+            <select id="produto" name="produto" class="form-control" [(ngModel)]="doacao.produto" required>
+              <option value="" disabled selected>Selecione um produto</option>
+              <option *ngFor="let produto of produtos" [value]="produto">{{ produto }}</option>
+            </select>
+          </div>
+  
+          <!-- Quantidade -->
+          <div class="form-group">
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" name="quantidade" class="form-control" [(ngModel)]="doacao.quantidade" min="1" required>
+          </div>
+  
+          <!-- Data -->
+          <div class="form-group">
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" class="form-control" [(ngModel)]="doacao.data" required>
+          </div>
+  
+          <!-- Botão de Envio -->
+          <button type="submit" class="btn btn-success" [disabled]="!doacaoForm.form.valid">Confirmar Doação</button>
+        </form>
+      </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer text-center text-white p-3">
+  © 2024 Copyright:
+  <a class="text-white" href="/home">CAACCH</a>
+</div>

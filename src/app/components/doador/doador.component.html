@@ -1,89 +1,75 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Doador</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-
-<body>
-    <nav class="navbar bg-body-tertiary" id="nav">
-        <div class="container-fluid">
-            <a class="navbar-brand text-white" routerLink="/home" id="caacchtitle">
-                <img src="assets/Logo contraste_.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" id="imgnav">
-            </a>
-            <div>
-                <a routerLink="/home" class="caacchtitle">CAACCH</a>
-            </div>
-            <div class="link-container">
-                <a class="text-white" routerLink="/doador" id="linkDoador">Doador</a>
-                <a class="text-white" href="/produto">Produto</a>
-                <a class="text-white" href="#">Doação</a>
-                <a class="text-white" href="#">Solicitação</a>
-                <a class="text-white" href="#">Estoque</a>
-            </div>
+<nav class="navbar bg-body-tertiary" id="nav">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" routerLink="/home" id="caacchtitle">
+            <img src="assets/Logo contraste_.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" id="imgnav">
+        </a>
+        <div>
+            <a routerLink="/home" class="caacchtitle">CAACCH</a>
         </div>
-    </nav>
+        <div class="link-container">
+            <a class="text-white" routerLink="/doador">Doador</a>
+            <a class="text-white" routerLink="/produto">Produto</a>
+            <a class="text-white" href="/doacao">Doação</a>
+            <a class="text-white" href="/solicitacao">Solicitação</a>
+            <a class="text-white" href="/auditoria">Auditoria</a>
+            <a class="text-white" href="/estoque">Estoque</a>
+        </div>
+    </div>
+</nav>
 
     <!-- Botão para listar doadores -->
     <div class="container mt-4" style="padding-left: 0px;">
-        <a routerLink="/doador-list" class="btn btn-info list-button">Lista de Doadores Cadastrados</a>
+        <a routerLink="/doador-list" class="btn btn-success list-button">Lista de Doadores Cadastrados</a>
     </div>
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="col-md-8">
+        <h1 class="msg-doador text-center">Cadastro de Doador</h1>
+        <hr class="row-title">
+        <form class="custom-form" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required [(ngModel)]="doador.nome" name="nome">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="data-nascimento">Data de Nascimento:</label>
+                    <input type="date" class="form-control" id="data-nascimento" required [(ngModel)]="doador.dataNascimento" name="dataNascimento">
+                </div>
+            </div>
 
-    <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
-        <div class="col-md-8">
-            <h1 class="msg-doador text-center">Cadastro de Doador</h1>
-            <hr class="row-title">
-            <form class="custom-form" (ngSubmit)="onSubmit()">
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="nome">Nome Completo:</label>
-                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required [(ngModel)]="doador.nome" name="nome">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="data-nascimento">Data de Nascimento:</label>
-                        <input type="date" class="form-control" id="data-nascimento" required [(ngModel)]="doador.dataNascimento" name="dataNascimento">
-                    </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF" required [(ngModel)]="doador.cpf" name="cpf">
                 </div>
-    
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="cpf">CPF:</label>
-                        <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF" required [(ngModel)]="doador.cpf" name="cpf">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="email">E-mail:</label>
-                        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required [(ngModel)]="doador.email" name="email">
-                    </div>
+                <div class="form-group col-md-6">
+                    <label for="email">E-mail:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required [(ngModel)]="doador.email" name="email">
                 </div>
-    
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="telefone">Telefone:</label>
-                        <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone" required [(ngModel)]="doador.telefone" name="telefone">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="endereco">Endereço:</label>
-                        <input type="text" class="form-control" id="endereco" placeholder="Digite seu endereço" required [(ngModel)]="doador.endereco" name="endereco">
-                    </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone" required [(ngModel)]="doador.telefone" name="telefone">
                 </div>
-    
-                <button type="submit" class="btn btn-success">CADASTRAR</button>
-            </form>
-        </div>
+                <div class="form-group col-md-6">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" class="form-control" id="endereco" placeholder="Digite seu endereço" required [(ngModel)]="doador.endereco" name="endereco">
+                </div>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-success">CADASTRAR</button>
+        </form>
     </div>
+</div>
 
-    <div class="text-center text-white p-3" style="background-color: #00b753;">
-        © 2024 Copyright:
-        <a class="text-white" href="/home">CAACCH</a>
-    </div>
-    
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+<div class="footer text-center text-white p-3">
+    © 2024 Copyright:
+    <a class="text-white" href="/home">CAACCH</a>
+</div>
 
-</html>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

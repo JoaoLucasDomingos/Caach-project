@@ -77,29 +77,14 @@
     padding-left: 20px;   // Adiciona padding à esquerda da página
     padding-right: 20px;  // Adiciona padding à direita da página
 }
-
-.row {
+.row{
     justify-content: center;
     align-items: center;
-}
-
-.custom-form {
-    width: 100%;  /* Garantir que o formulário ocupe toda a largura disponível */
-}
-
-.form-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px; /* Adiciona espaço entre as colunas */
-}
-
-.form-group {
-    width: 48%; /* Deixa cada campo ocupar 48% da largura do container para formatação ideal */
 }
 .footer {
     background-color: #00b753;
     padding: 10px 0;
     color: white;
     text-align: center;
-    margin-top: 30px; /* Empurra o footer para o final da página */
+    margin-top: auto; /* Empurra o footer para o final da página */
   }

@@ -7,9 +7,11 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { DoadorComponent } from './components/doador/doador.component';
 import { DoadorListComponent } from './components/doador-list/doador-list.component';
-import { DoadorEditComponent } from './components/doador-edit/doador-edit.component'; 
-import { RouterModule } from '@angular/router';
-import { ProdutoComponent } from './components/produto/produto.component';
+import { DoacaoComponent } from './components/doacao/doacao.component';
+import { SolicitacaoComponent } from './components/solicitacao/solicitacao.component';
+import { AuditoriaComponent } from './components/auditoria/auditoria.component';
+import { EstoqueComponent } from './components/estoque/estoque.component'
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,13 @@ import { ProdutoComponent } from './components/produto/produto.component';
     LoginComponent,
     HomeComponent,
     DoadorComponent,
-    DoadorListComponent
+    DoadorListComponent,
+    DoacaoComponent,
+    SolicitacaoComponent,
+    AuditoriaComponent,
+    EstoqueComponent,
+   
+
     
   ],
   imports: [

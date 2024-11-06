@@ -1,0 +1,56 @@
+<nav class="navbar bg-body-tertiary" id="nav">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" routerLink="/home" id="caacchtitle">
+            <img src="assets/Logo contraste_.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" id="imgnav">
+        </a>
+        <div>
+            <a routerLink="/home" class="caacchtitle">CAACCH</a>
+        </div>
+        <div class="link-container">
+            <a class="text-white" routerLink="/doador">Doador</a>
+            <a class="text-white" routerLink="/produto">Produto</a>
+            <a class="text-white" href="/doacao">Doação</a>
+            <a class="text-white" href="/solicitacao">Solicitação</a>
+            <a class="text-white" href="/auditoria">Auditoria</a>
+            <a class="text-white" href="/estoque">Estoque</a>
+          </div>
+    </div>
+</nav>
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="col-md-8">
+      <h1 class="msg-auditoria text-center">Auditoria</h1>
+      <hr class="row-title">
+      <!-- Tabela de Solicitações -->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">CPF</th>
+            <th scope="col">Pedido (Descrição)</th>
+            <th scope="col">Data Solicitação</th>
+            <th scope="col">Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let solicitacao of solicitacoes">
+            <td>{{ solicitacao.id }}</td>
+            <td>{{ solicitacao.nome }}</td>
+            <td>{{ solicitacao.cpf }}</td>
+            <td>{{ solicitacao.pedido }}</td>
+            <td>{{ solicitacao.dataSolicitacao | date:'dd/MM/yyyy' }}</td>
+            <td>
+              <!-- Botões de Aprovar e Desaprovar -->
+              <button class="btn btn-success" (click)="approve(solicitacao)">Aprovar</button>
+              <button class="btn btn-danger" (click)="reject(solicitacao)">Desaprovar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <div class="footer text-center text-white p-3">
+    © 2024 Copyright:
+    <a class="text-white" href="/home">CAACCH</a>
+</div>

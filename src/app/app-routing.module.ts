@@ -6,6 +6,10 @@ import { DoadorComponent } from './components/doador/doador.component';
 import { DoadorListComponent } from './components/doador-list/doador-list.component';
 import { DoadorEditComponent } from './components/doador-edit/doador-edit.component';
 import { ProdutoComponent } from './components/produto/produto.component';
+import { DoacaoComponent } from './components/doacao/doacao.component';
+import { SolicitacaoComponent } from './components/solicitacao/solicitacao.component';
+import { AuditoriaComponent } from './components/auditoria/auditoria.component';
+import { EstoqueComponent } from './components/estoque/estoque.component'
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -14,8 +18,15 @@ const routes: Routes = [
   { path: 'doador', component: DoadorComponent },
   { path: 'doador-list', component: DoadorListComponent },
   { path: 'doador/edit/:cpf', component: DoadorEditComponent },
-  { path: 'produto', component: ProdutoComponent },  // Mova esta linha para cima da rota '**'
-  { path: '**', redirectTo: '/login' }
+  { path: 'produto', component: ProdutoComponent },  
+  { path: 'doacao', component: DoacaoComponent },
+  { path: 'solicitacao', component: SolicitacaoComponent },
+  { path: 'auditoria', component: AuditoriaComponent },
+  { path: 'estoque', component: EstoqueComponent },
+
+  { path: '**', redirectTo: '/login' }, //Sempre deixar este para o ultimo
+ 
+
 ];
 
 @NgModule({
